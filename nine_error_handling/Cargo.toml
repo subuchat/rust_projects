@@ -1,0 +1,13 @@
+[package]
+name = "nine_error_handling"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+#Instead of unwinding stack if we want to abort in response to panic in release mode(below - else can make debug mode)
+
+[profile.release]
+panic = 'abort'
+
+[dependencies]
